@@ -1,6 +1,6 @@
 // src/pages/Machinery.jsx
 
-import "../styles/Machinery.css";
+import "../styles/machinery.css";
 
 const machinesData = [
   {

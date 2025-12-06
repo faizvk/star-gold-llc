@@ -1,6 +1,6 @@
 // src/components/Hero.jsx
 
-import "../styles/Hero.css";
+import "../styles/hero.css";
 // Removed useNavigate import as we are using anchor links for SPA scrolling
 
 // Helper function for smooth scrolling (reused logic from Navbar)

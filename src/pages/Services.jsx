@@ -1,6 +1,6 @@
 // src/pages/Services.jsx
 
-import "../styles/Services.css";
+import "../styles/services.css";
 
 // Detailed service data for richer cards
 const detailedServices = [

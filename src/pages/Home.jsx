@@ -7,7 +7,7 @@ import Services from "./Services";
 import Products from "./Products";
 import Machinery from "./Machinery";
 import Contact from "./Contact";
-import "../styles/Home.css";
+import "../styles/home.css";
 
 // Define standard options for professional scroll reveal
 const revealOptions = {

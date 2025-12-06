@@ -1,7 +1,7 @@
 // src/components/Footer.jsx
 
 import { Link } from "react-router-dom"; // Assuming internal links will use React Router
-import "../styles/Footer.css"; // Note the capitalization
+import "../styles/footer.css"; // Note the capitalization
 
 export default function Footer() {
   return (

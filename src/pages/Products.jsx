@@ -1,6 +1,6 @@
 // src/pages/Products.jsx
 
-import "../styles/Products.css";
+import "../styles/products.css";
 import { products } from "../data/products";
 import { Link } from "react-router-dom";
 

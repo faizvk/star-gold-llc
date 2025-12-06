@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 // Removed 'Link' import since we are using anchor tags for SPA scrolling
-import "../styles/Navbar.css";
+import "../styles/navbar.css";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
