@@ -1,0 +1,137 @@
+/* src/styles/About.css */
+
+/* 1. Introductory Grid Layout */
+.about-intro-grid {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 3rem;
+  align-items: flex-start;
+  margin-bottom: 3rem;
+}
+
+.lead-paragraph {
+  /* FONT UPGRADE: Lighter weight (500) for a cleaner, modern lead text */
+  font-size: 1.4rem; /* Slightly larger size for lead text emphasis */
+  font-weight: 500;
+  color: var(--color-text-dark);
+  margin-bottom: 1.5rem;
+  line-height: 1.6; /* Increased line-height for easier reading */
+}
+
+.about-main-content p {
+  margin-bottom: 1.2rem; /* Slightly increased paragraph spacing */
+  /* FONT UPGRADE: Standard body text weight */
+  font-weight: 400;
+  line-height: 1.7; /* Standardized line-height for body copy */
+  color: var(--color-text-light);
+}
+
+/* Secondary Button - Enhanced Professionalism */
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  background: none;
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+  padding: 0.8rem 1.8rem;
+  border-radius: 4px;
+  /* FONT UPGRADE: Strong semi-bold for clickable elements */
+  font-weight: 600;
+  margin-top: 2rem; /* Increased top margin for separation */
+  transition: all 0.3s ease;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px; /* Increased letter spacing for corporate touch */
+  font-size: 0.95rem; /* Slightly smaller font size for button text */
+}
+
+.btn-secondary:hover {
+  background: var(--color-primary);
+  color: white;
+  text-decoration: none;
+  transform: none;
+  box-shadow: none;
+}
+
+.arrow-icon {
+  margin-left: 0.75rem;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.btn-secondary:hover .arrow-icon {
+  transform: translateX(3px);
+}
+
+/* --- VISUAL PLACEHOLDER (Image Container) --- */
+.about-visual-placeholder {
+  height: 350px;
+  background-color: transparent;
+  border: none;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  display: block;
+}
+
+.about-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* 2. Separator Line */
+.section-divider {
+  border: 0;
+  height: 1px;
+  background-color: var(--color-border-light);
+  margin: 5rem 0;
+}
+
+/* 3. Vision/Mission Cards Refinement (Minimalist styles retained) */
+.vision-mission-title {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.mission-card {
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  border-top: 5px solid transparent;
+  border-left: none;
+  text-align: center;
+  box-shadow: none;
+  transition: all 0.4s ease;
+}
+
+.mission-card:hover {
+  transform: none;
+  box-shadow: none;
+  background-color: var(--color-background-alt);
+  border-top: 5px solid var(--color-primary);
+}
+
+.mission-card h3 {
+  /* FONT UPGRADE: Clear, strong heading font */
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: var(
+    --color-primary-dark
+  ); /* Use dark primary color for section headings */
+  margin-bottom: 0.75rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .about-intro-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .about-visual-placeholder {
+    order: -1;
+    height: 250px;
+  }
+}

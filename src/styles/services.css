@@ -1,0 +1,79 @@
+/* src/styles/Services.css */
+
+/* Subtitle for the section (a common professional practice) */
+.section-subtitle {
+  font-size: 1.25rem;
+  color: var(--color-text-light);
+  text-align: center;
+  margin-top: -1.5rem; /* Pull up closer to the title */
+  margin-bottom: 3rem; /* Push down content */
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Service Card Refinements */
+.service-card {
+  text-align: center; /* Center content within the card */
+  border-left: none; /* Remove the left accent border for service cards */
+  border-bottom: 3px solid var(--color-primary); /* Use a bottom accent instead */
+  padding: 2rem 1.5rem;
+}
+
+.service-card:hover {
+  /* Maintain professional hover effect */
+  transform: translateY(-4px);
+}
+
+.service-icon {
+  font-size: 3rem; /* Large icon for visual impact */
+  margin-bottom: 1rem;
+  color: var(--color-primary); /* Use primary color */
+}
+
+.service-card h3 {
+  border-bottom: none; /* Remove internal divider */
+  margin-bottom: 0.75rem;
+}
+
+/* WHY CHOOSE US Section Styling */
+.why-choose-section {
+  padding-top: 4rem; /* Add extra spacing before this new section */
+  text-align: center;
+}
+
+.why-choose-section .section-title {
+  margin-bottom: 1.5rem;
+  text-align: center;
+  border-bottom: none; /* Make this title slightly less formal */
+}
+
+/* Feature Card (Why Choose Us) - Modify the global card style */
+.feature-card {
+  text-align: left;
+  /* Use a subtle background color lift instead of border-left */
+  background-color: white;
+  transition: background-color 0.3s ease;
+  border: 1px solid var(--color-border-light);
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  /* Highlight the card with a very subtle primary background on hover */
+  background-color: var(--color-background-light);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card h3 {
+  color: var(--color-primary);
+  border-bottom: none;
+  font-size: 1.4rem;
+}
+
+/* Responsive adjustment for the feature grid (if needed) */
+@media (max-width: 992px) {
+  .why-choose-grid {
+    /* If there are only three items, maybe make it 1 column on small screens */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}

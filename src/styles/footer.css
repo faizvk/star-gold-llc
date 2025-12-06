@@ -1,0 +1,110 @@
+/* src/styles/Footer.css */
+
+.site-footer {
+  /* Use a slightly darker shade or the primary color for professionalism */
+  background: var(--color-primary-dark);
+  color: white;
+  padding-top: 3rem; /* Generous top padding */
+  font-size: 0.95rem;
+}
+
+.footer-container {
+  /* Use CSS Grid for the professional multi-column layout */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Subtle separator */
+}
+
+/* 1. Logo and Branding */
+.footer-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 1rem;
+  display: block; /* Ensures logo takes full width */
+}
+
+.brand-slogan {
+  margin-bottom: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.contact-info p {
+  margin: 0.5rem 0;
+  line-height: 1.4;
+}
+
+/* 2. Links Columns */
+.footer-column h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-column ul li a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+  color: var(--color-background-light); /* Light text on hover */
+  text-decoration: underline;
+}
+
+/* 3. Social Icons */
+.social-icons a {
+  font-size: 1.5rem;
+  color: white;
+  margin-right: 1rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: var(--color-primary); /* Use a contrast color from the palette */
+}
+
+/* 4. Bottom Copyright Bar */
+.footer-bottom {
+  background: #00384d; /* Slightly darker shade for the bottom bar */
+  padding: 1rem 0;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.85rem;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .footer-container {
+    /* Stack the columns vertically on mobile */
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-column {
+    margin-bottom: 1.5rem;
+  }
+
+  .footer-column ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-bottom .container {
+    text-align: center;
+  }
+}

@@ -1,0 +1,100 @@
+/* src/styles/Hero.css */
+
+.hero-section {
+  /* Height based on viewport */
+  height: 90vh;
+
+  /* 1. BACKGROUND ADJUSTMENT: 
+     The linear-gradient (the dark overlay) must be applied BEFORE the image
+     in the background property list to layer it on top, ensuring text visibility. */
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+    /* Dark overlay for contrast */ url("/main.png")
+      /* UPDATED PATH TO YOUR LOCAL ASSET */ center/cover no-repeat;
+
+  /* Layout */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 0 1.5rem;
+
+  /* Animation */
+  animation: fadeIn 1.2s ease-out;
+  overflow: hidden;
+}
+
+.hero-content {
+  max-width: 900px;
+}
+
+/* 1. Typography */
+.hero-content h1 {
+  /* Increased size for premium impact */
+  font-size: 5rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+  margin-bottom: 1rem;
+  /* Text shadow remains minimal but helps lift the text from the background */
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.hero-content p {
+  /* Slightly larger, light font weight for crispness */
+  font-size: 1.6rem;
+  font-weight: 300;
+  opacity: 1;
+  margin-bottom: 3rem;
+  line-height: 1.4;
+}
+
+/* 2. Button Clarity (btn-primary is defined in GlobalStyles.css, but 
+      its visibility is crucial here. We rely on the ACCENT color for high contrast) 
+*/
+/* The .btn-primary style ensures maximum visibility against the dark background 
+   by using the bright --color-accent (orange/yellow) defined in GlobalStyles.css. */
+
+/* 3. Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 4. Responsive Design (Unchanged, as it's already optimized) */
+@media (max-width: 1200px) {
+  .hero-content h1 {
+    font-size: 4.2rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero-section {
+    height: 70vh;
+  }
+  .hero-content h1 {
+    font-size: 3.5rem;
+  }
+  .hero-content p {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-section {
+    height: 60vh;
+  }
+  .hero-content h1 {
+    font-size: 2.8rem;
+    letter-spacing: 0;
+  }
+  .hero-content p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+}

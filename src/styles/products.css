@@ -1,0 +1,145 @@
+/* src/styles/Products.css */
+
+/* --- SECTION HEADERS --- */
+
+.products-category-section {
+  margin-bottom: 3rem; /* Space between categories */
+}
+
+.mt-4 {
+  margin-top: 4rem;
+}
+
+.category-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  margin-bottom: 0.5rem;
+  border-bottom: 2px solid var(--color-border-light);
+  padding-bottom: 0.5rem;
+}
+
+.category-description {
+  font-size: 1.1rem;
+  color: var(--color-text-light);
+  margin-bottom: 2rem;
+}
+
+/* --- PRODUCT GRID & CARD --- */
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.product-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid var(--color-border-light);
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* 1. Image Area (Hover Effect) */
+.product-image-area {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.product-card:hover .product-image {
+  transform: scale(1.05);
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 123, 255, 0.8);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.product-card:hover .image-overlay {
+  opacity: 1;
+}
+
+/* 2. Product Details */
+.product-details {
+  padding: 1rem 1.2rem;
+  display: flex;
+  flex-direction: column; /* Changed to column to stack title/desc */
+  justify-content: space-between;
+  align-items: flex-start; /* Align text to the left */
+  gap: 0.75rem;
+}
+
+.product-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-text-dark);
+}
+
+.product-short-desc {
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+  margin-bottom: 0.5rem;
+}
+
+.product-inquire-btn {
+  display: inline-block;
+  background: var(--color-primary);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  width: 100%; /* Make the inquire button full width */
+  text-align: center;
+}
+
+.product-inquire-btn:hover {
+  background: var(--color-primary-dark);
+}
+
+/* --- GENERAL CTA BAR --- */
+
+.products-cta-bar {
+  margin-top: 4rem;
+  background-color: #f0f8ff;
+  border: 1px solid #cceeff;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.products-cta-bar p {
+  font-size: 1.25rem;
+  color: var(--color-text-dark);
+  margin-bottom: 1rem;
+}

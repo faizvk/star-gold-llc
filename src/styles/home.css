@@ -1,0 +1,85 @@
+/* src/styles/Home.css */
+
+/* --- GENERAL LAYOUT COMPONENTS --- */
+
+/* Standardized vertical padding for all main sections is now in GlobalStyles.css (.section-padding) */
+
+/* General purpose grid layout (used for services, cards, etc.) */
+/* src/styles/Hero.css */
+
+/* CTA button styling is inherited from .btn-primary in GlobalStyles.css */
+
+/* 3. Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 4. Responsive Design */
+@media (max-width: 992px) {
+  .hero-section {
+    height: 70vh;
+  }
+  .hero-content h1 {
+    font-size: 3.8rem;
+  }
+  .hero-content p {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-section {
+    height: 60vh;
+  }
+  .hero-content h1 {
+    font-size: 2.8rem;
+  }
+  .hero-content p {
+    font-size: 1.2rem;
+  }
+}
+.item-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* General purpose card style (base for all content blocks) */
+.card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-left: 5px solid var(--color-primary);
+  text-align: left;
+  height: 100%;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.card h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--color-text-dark);
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.card p {
+  font-size: 1rem;
+  color: var(--color-text-light);
+  line-height: 1.6;
+}

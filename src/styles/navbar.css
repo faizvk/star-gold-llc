@@ -1,0 +1,133 @@
+/* src/styles/Navbar.css */
+
+/* 1. HEADER (Fixed Position & Base Styles) */
+.navbar-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+
+  /* Uses the deep primary color */
+  background: var(--color-primary-dark);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  padding: 1rem 0;
+  transition: background 0.3s ease;
+}
+
+/* 2. CONTAINER & LAYOUT */
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+}
+
+/* 3. NAVIGATION LINKS (Desktop) */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.25rem 0.5rem;
+  position: relative;
+}
+
+.nav-links a:hover {
+  color: var(--color-background-light);
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-accent); /* Accent hover line */
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* 4. CALL TO ACTION (CTA) Button - Uses the ACCENT color */
+.nav-cta-button {
+  background-color: var(--color-accent);
+  color: white !important;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  margin-left: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.nav-cta-button:hover {
+  background-color: #e57c00;
+  text-decoration: none !important;
+  transform: translateY(-1px);
+}
+
+/* 5. MOBILE MENU */
+.menu-icon {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 992px) {
+  .nav-links {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-links.open {
+    display: flex;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background: var(--color-primary-dark);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-top: 1px solid var(--color-primary);
+    padding: 1rem 0;
+  }
+
+  .nav-links a {
+    padding: 0.75rem 1rem;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .nav-links a::after {
+    display: none;
+  }
+
+  .nav-cta-button {
+    margin: 1rem auto 0.5rem auto;
+    width: calc(100% - 2rem);
+    text-align: center;
+  }
+}
